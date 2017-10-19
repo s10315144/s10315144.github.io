@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="UTF-8">
+	<title>list</title>
+</head>
 <body>
 
+<form>
 <input type="checkbox" name="ListText" value="1">1<br>
 <input type="checkbox" name="ListText" value="2">2<br>
 <br>
 <input type="button" onclick="myFunction()" value="確定">
 <br><br>
-<input type="text" id="order" size="50">
-
+<input type="listview" id="ListView" size="50">
+</form>
 <script>
 function myFunction() {
     var ListText = document.forms[0];
@@ -16,10 +21,10 @@ function myFunction() {
     var i;
     for (i = 0; i < ListText.length; i++) {
         if (ListText[i].checked) {
-            txt = txt + ListText[i].value + " ";
+            txt = txt + ListText[i].value + '<br>' ;
         }
     }
-    document.getElementById("order").value = "You ordered a ListText with: " + txt;
+    document.getElementById("ListView").value = txt;
 }
 </script>
 
