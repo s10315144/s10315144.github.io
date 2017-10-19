@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="checkbox" name="ListText" value="1">1<br>
+<input type="checkbox" name="ListText" value="2">2<br>
+<br>
+<input type="button" onclick="myFunction()" value="確定">
+<br><br>
+<input type="text" id="order" size="50">
+
+<script>
+function myFunction() {
+    var ListText = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < ListText.length; i++) {
+        if (ListText[i].checked) {
+            txt = txt + ListText[i].value + " ";
+        }
+    }
+    document.getElementById("order").value = "You ordered a ListText with: " + txt;
+}
+</script>
+
+</body>
+</html>
